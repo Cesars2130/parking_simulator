@@ -1,4 +1,4 @@
-n este proyecto de simulador de estacionamiento en Go, implementé la gestión de vehículos que entran, estacionan y salen en intervalos definidos. Utilicé las características de Go y varias librerías específicas para asegurar un funcionamiento fluido y eficiente. A continuación, explicaré cómo el lenguaje y sus librerías me ayudaron a construir y organizar el simulador.
+En este proyecto de simulador de estacionamiento en Go, implementé la gestión de vehículos que entran, estacionan y salen en intervalos definidos. Utilicé las características de Go y varias librerías específicas para asegurar un funcionamiento fluido y eficiente. A continuación, explicaré cómo el lenguaje y sus librerías me ayudaron a construir y organizar el simulador.
 
 Go y su Uso en el Proyecto
 Go fue ideal para este simulador, ya que requiere manejar concurrencia para que cada vehículo actúe como una entidad independiente. En el simulador, cada vehículo es controlado como una goroutine, lo que permite ejecutar múltiples operaciones en paralelo sin una gran sobrecarga. Esto fue crucial para simular un flujo de entrada y salida en el estacionamiento, donde cada vehículo sigue su propio “reloj” de entrada, estacionamiento y salida.
@@ -45,6 +45,24 @@ Cómo Usarlo
 Compilación: Para ejecutar el simulador, uso go run main.go.
 Instalación de dependencias: Ejecuté go mod tidy para asegurar que todas las dependencias estén listas y actualizadas para la simulación gráfica.
 En general, este proyecto me permitió explorar y entender tanto las fortalezas de Go para la concurrencia como las dificultades de integrar gráficos en tiempo real. Fue una experiencia valiosa, combinando programación de sistemas y visualización gráfica en un simulador que refleja el funcionamiento de un estacionamiento.
+
+Experiencias y Lecciones Aprendidas en el Proyecto de Concurrencia en Go
+Trabajar en este proyecto de concurrencia en Go me ha dado una comprensión profunda sobre cómo diseñar aplicaciones que pueden manejar múltiples tareas de manera simultánea, una habilidad cada vez más importante en el desarrollo de software moderno. La naturaleza concurrente de Go y el manejo de goroutines y canales han transformado mi forma de ver y estructurar aplicaciones que requieren eficiencia y rapidez en la ejecución de tareas.
+
+Una de las lecciones más valiosas ha sido entender y respetar la complejidad de la sincronización entre goroutines. Al principio, manejar el acceso a recursos compartidos y prevenir condiciones de carrera fue todo un reto. Sin embargo, la experiencia me mostró la importancia de herramientas como sync.Mutex para proteger datos y sync.WaitGroup para coordinar la finalización de múltiples goroutines. Estos conceptos son claves para construir software concurrente y me dieron una base sólida para entender mejor la concurrencia en otros lenguajes también.
+
+Además, trabajar con canales en Go me enseñó a construir sistemas en los que las distintas partes de un programa se comunican de manera clara y efectiva. Los canales no solo me ayudaron a reducir errores, sino que también hicieron que el código fuera más fácil de leer y entender, una habilidad crucial en cualquier equipo de desarrollo.
+
+Consejos para Nuevos Programadores en Concurrencia
+Empieza por lo básico: Familiarízate bien con las goroutines y cómo lanzar funciones en paralelo. Experimenta con ejemplos simples antes de pasar a aplicaciones complejas.
+
+Usa sync.Mutex y sync.WaitGroup sabiamente: Cuando trabajas con variables compartidas, usa Mutex para evitar problemas de concurrencia. WaitGroup es especialmente útil para asegurarte de que todas las goroutines finalicen antes de que el programa termine.
+
+Aprovecha los canales: Los canales son una de las características más poderosas de Go. Aprender a usarlos para pasar datos entre goroutines puede hacer que tus programas concurrentes sean más seguros y organizados.
+
+Piensa en la estructura del código desde el inicio: Un buen diseño es esencial para evitar problemas al escalar el proyecto. Separar las responsabilidades y agrupar funciones relacionadas en módulos puede hacer que el código sea mucho más manejable.
+
+Prueba y revisa el código concurrente: Los problemas de concurrencia son difíciles de detectar y resolver. Prueba tu código en diferentes escenarios y revisa la lógica para evitar errores sutiles que solo aparecen cuando el programa está bajo carga.
 
 ![WhatsApp Image 2024-11-11 at 11 59 08 PM](https://github.com/user-attachments/assets/36ead091-5f34-411e-be3a-ad5be16b61d5)
 [Introducción a Go (1).pdf](https://github.com/user-attachments/files/17711762/Introduccion.a.Go.1.pdf)
