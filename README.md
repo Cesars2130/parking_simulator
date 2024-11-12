@@ -66,4 +66,5 @@ Piensa en la estructura del código desde el inicio: Un buen diseño es esencial
 Prueba y revisa el código concurrente: Los problemas de concurrencia son difíciles de detectar y resolver. Prueba tu código en diferentes escenarios y revisa la lógica para evitar errores sutiles que solo aparecen cuando el programa está bajo carga.
 
 ![WhatsApp Image 2024-11-11 at 11 59 08 PM](https://github.com/user-attachments/assets/36ead091-5f34-411e-be3a-ad5be16b61d5)
-[Introducción a Go (1).pdf](https://github.com/user-attachments/files/17711762/Introduccion.a.Go.1.pdf)
+
+[Introducción a Go (2).pdf](https://github.com/user-attachments/files/17711833/Introduccion.a.Go.2.pdf)
