@@ -46,7 +46,8 @@ Compilación: Para ejecutar el simulador, uso go run main.go.
 Instalación de dependencias: Ejecuté go mod tidy para asegurar que todas las dependencias estén listas y actualizadas para la simulación gráfica.
 En general, este proyecto me permitió explorar y entender tanto las fortalezas de Go para la concurrencia como las dificultades de integrar gráficos en tiempo real. Fue una experiencia valiosa, combinando programación de sistemas y visualización gráfica en un simulador que refleja el funcionamiento de un estacionamiento.
 
-Experiencias y Lecciones Aprendidas en el Proyecto de Concurrencia en Go
+Experiencias y Lecciones Aprendidas en el Proyecto de Concurrencia en Go:
+
 Trabajar en este proyecto de concurrencia en Go me ha dado una comprensión profunda sobre cómo diseñar aplicaciones que pueden manejar múltiples tareas de manera simultánea, una habilidad cada vez más importante en el desarrollo de software moderno. La naturaleza concurrente de Go y el manejo de goroutines y canales han transformado mi forma de ver y estructurar aplicaciones que requieren eficiencia y rapidez en la ejecución de tareas.
 
 Una de las lecciones más valiosas ha sido entender y respetar la complejidad de la sincronización entre goroutines. Al principio, manejar el acceso a recursos compartidos y prevenir condiciones de carrera fue todo un reto. Sin embargo, la experiencia me mostró la importancia de herramientas como sync.Mutex para proteger datos y sync.WaitGroup para coordinar la finalización de múltiples goroutines. Estos conceptos son claves para construir software concurrente y me dieron una base sólida para entender mejor la concurrencia en otros lenguajes también.
